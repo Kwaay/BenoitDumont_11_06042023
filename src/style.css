@@ -8,12 +8,16 @@ body {
   margin: 0;
 }
 
+/* Header */
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  padding: 2vh 4vh;
+  padding: 40px 0;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .header-container ul {
@@ -45,4 +49,39 @@ body {
   .header-container ul {
     padding: 0;
   }
+}
+
+/* Banner */
+
+.banner {
+  position: relative;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  margin: 0 100px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 70%;
+}
+
+.banner p {
+  position: absolute;
+  top: 2.5rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.desktop {
+  height: 225px;
+}
+
+.responsive {
+  height: 255px;
 }
