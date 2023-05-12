@@ -19,7 +19,7 @@ export default function Banner({ img, text, mod }) {
 Banner.propTypes = {
   img: PropTypes.string.isRequired,
   text: PropTypes.string,
-  mod: PropTypes.oneOf(['desktop', 'responsive']),
+  mod: PropTypes.oneOf(['desktop', 'responsive']).isRequired,
 };
 Banner.defaultProps = {
   img: null,
