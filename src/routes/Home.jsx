@@ -1,6 +1,8 @@
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
+import Thumb from '../components/Thumb';
+import logementsData from '../../logements.json';
 
 export default function Home() {
   return (
@@ -11,6 +13,11 @@ export default function Home() {
         text="Chez vous, partout et ailleurs"
         mod="desktop"
       />
+      <div className="thumb-container">
+        {logementsData.map((logement) => (
+          <Thumb key={logement.id} {...logement} />
+        ))}
+      </div>
       <Footer />
     </div>
   );

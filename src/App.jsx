@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './routes/home';
-import About from './routes/about';
+import Home from './routes/Home';
+import About from './routes/About';
 import './style.css';
 
 const router = createBrowserRouter([
@@ -13,6 +13,10 @@ const router = createBrowserRouter([
   },
   {
     path: '/about',
+    element: <About />,
+  },
+  {
+    path: '/logement/:id',
     element: <About />,
   },
 ]);
