@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
+import Footer from '../components/Footer';
 
 export default function About() {
   return (
@@ -37,6 +38,7 @@ export default function About() {
           textFontSize={24}
         />
       </ul>
+      <Footer />
     </div>
   );
 }
