@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 
 import Header from '../components/Header';
 import Banner from '../components/Banner';
-import Dropdown from '../components/Dropdown';
 import Footer from '../components/Footer';
+import DropdownsList from '../components/DropdownList';
 import AboutService from '../services/About';
 
 export default function About() {
@@ -24,11 +24,7 @@ export default function About() {
         text=""
         mod="desktop"
       />
-      <ul className="dropdown-container">
-        {abouts.map((about) => (
-          <Dropdown key={about.title} {...about} />
-        ))}
-      </ul>
+      <DropdownsList dropdowns={abouts}></DropdownsList>
       <Footer />
     </div>
   );
