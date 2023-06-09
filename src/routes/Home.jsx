@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Thumb from '../components/Thumb';
-import logementsData from '../../logements.json';
+import logementsData from '../../public/logements.json';
 
 export default function Home() {
   return (
