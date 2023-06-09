@@ -1,10 +1,20 @@
+import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Thumb from '../components/Thumb';
-import logementsData from '../../public/logements.json';
+import AccommodationService from '../services/Accommodation';
 
 export default function Home() {
+  const [accommodations, setAccommodations] = useState([]);
+
+  useEffect(() => {
+    async function fetchAccommodations() {
+      const datas = await AccommodationService.getAll();
+      setAccommodations(datas);
+    }
+    fetchAccommodations();
+  }, []);
   return (
     <div className="App">
       <Header />
@@ -14,8 +24,8 @@ export default function Home() {
         mod="desktop"
       />
       <div className="thumb-container">
-        {logementsData.map((logement) => (
-          <Thumb key={logement.id} {...logement} />
+        {accommodations.map((accommodation) => (
+          <Thumb key={accommodation.id} {...accommodation} />
         ))}
       </div>
       <Footer />
