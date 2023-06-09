@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './routes/Home';
 import About from './routes/About';
+import NotFound from './routes/404';
 import './style.css';
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: '/logement/:id',
     element: <About />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
 
