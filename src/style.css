@@ -247,3 +247,48 @@ a:hover {
   text-decoration: underline;
   color: #ff6060;
 }
+
+/* Accomodation */
+
+.accommodation-container {
+  margin: 0 100px;
+}
+
+.accommodation-title {
+  padding: 30px 0 20px;
+}
+
+.accommodation-title h1 {
+  font-family: Montserrat, sans-serif;
+  color: #ff6060;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.accommodation-title p {
+  font-family: Montserrat, sans-serif;
+  color: #ff6060;
+  font-size: 18px;
+}
+
+/* Tags */
+
+.tag-container {
+  display: flex;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  gap: 10px;
+}
+
+.tag {
+  width: 115px;
+  height: 25px;
+  background-color: #ff6060;
+  border-radius: 10px;
+  color: white;
+  list-style-type: none;
+  text-align: center;
+  line-height: 25px;
+  font-size: smaller;
+}
