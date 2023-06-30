@@ -5,7 +5,9 @@ export default function Page404() {
   return (
     <div className="App">
       <Header />
-      <NotFound />
+      <main>
+        <NotFound />
+      </main>
     </div>
   );
 }
