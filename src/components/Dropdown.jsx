@@ -20,10 +20,18 @@ export default function Dropdown({
         <i className="fas fa-chevron-down dropdown-toggle" onClick={toggle}></i>
       </h1>
 
-      {isOpen && (
+      {isOpen && !Array.isArray(content) && (
         <p className="dropdown-content" style={{ fontSize: textFontSize }}>
           {content}
         </p>
+      )}
+
+      {isOpen && Array.isArray(content) && (
+        <ul className="dropdown-content" style={{ fontSize: textFontSize }}>
+          {content.map((e) => (
+            <li key={e}>{e}</li>
+          ))}
+        </ul>
       )}
     </li>
   );
@@ -31,7 +39,7 @@ export default function Dropdown({
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
   openedByDefault: PropTypes.bool.isRequired,
   textFontSize: PropTypes.number.isRequired,
 };

@@ -14,7 +14,7 @@ export default class Service {
     if (!this.findable) throw new Error("This resource isn't findable");
     const items = await this.getAll();
     const searchItem = items.find((item) => item.id === id);
-    if (searchItem !== null) return searchItem;
+    if (searchItem !== undefined) return searchItem;
     throw new Error('Unable to fetch this resource');
   }
 }
