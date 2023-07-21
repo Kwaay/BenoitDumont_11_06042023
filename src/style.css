@@ -58,22 +58,6 @@ main {
   font-size: 24px;
 }
 
-@media screen and (max-width: 700px) {
-  .nav-btn {
-    text-transform: uppercase;
-    font-size: 17px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .header {
-    flex-direction: column;
-  }
-
-  .header-container ul {
-    padding: 0;
-  }
-}
-
 /* Banner */
 
 .banner {
@@ -83,6 +67,7 @@ main {
   background: rgba(0, 0, 0, 70%);
   overflow: hidden;
   margin: 0 100px 50px;
+  height: 225px;
 }
 
 .banner img {
@@ -100,14 +85,14 @@ main {
   width: 100%;
   color: white;
   text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .desktop {
   height: 225px;
-}
-
-.responsive {
-  height: 255px;
 }
 
 /* Dropdown */
@@ -433,4 +418,100 @@ a:hover {
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .header-container ul {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    margin: 20px 20px 0;
+    padding: 0;
+  }
+
+  .nav-btn {
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .header-container ul {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .banner p {
+    font-size: 33px;
+  }
+
+  .thumb-container,
+  .banner {
+    margin: 20px;
+  }
+
+  .thumb-container {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-container ul {
+    gap: 10px;
+  }
+  .header img {
+    width: 145px;
+    height: 47px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    margin: 20px 20px 0;
+    padding: 0;
+  }
+
+  .nav-btn {
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .banner {
+    height: 111px;
+  }
+
+  .banner p {
+    top: 1.7rem;
+    font-size: 24px;
+    justify-content: initial;
+    left: 16px;
+    gap: 0;
+  }
+
+  .header img {
+    width: 145px;
+    height: 47px;
+  }
+
+  .header-container ul {
+    display: flex;
+  }
+
+  .thumb {
+    width: 325px;
+    height: 255px;
+  }
+
+  .thumb-container {
+    grid-auto-rows: initial;
+    gap: 20px;
+  }
+
+  .footer span {
+    font-size: 12px;
+  }
 }

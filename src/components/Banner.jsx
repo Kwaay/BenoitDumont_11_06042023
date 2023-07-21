@@ -1,12 +1,16 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
-export default function Banner({ img, text, mod }) {
+export default function Banner({ img, text }) {
   if (text !== undefined) {
     return (
-      <div className={`banner ${mod === 'desktop' ? 'desktop' : 'responsive'}`}>
+      <div className="banner">
         <img src={img} alt={img}></img>
-        <p>{text}</p>
+        <p>
+          {text.map((e) => (
+            <span key={e}>{e}</span>
+          ))}
+        </p>
       </div>
     );
   }
@@ -18,11 +22,9 @@ export default function Banner({ img, text, mod }) {
 }
 Banner.propTypes = {
   img: PropTypes.string.isRequired,
-  text: PropTypes.string,
-  mod: PropTypes.oneOf(['desktop', 'responsive']).isRequired,
+  text: PropTypes.array,
 };
 Banner.defaultProps = {
   img: null,
   text: null,
-  mod: 'desktop',
 };
