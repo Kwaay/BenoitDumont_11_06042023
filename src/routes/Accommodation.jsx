@@ -35,16 +35,18 @@ export default function Accommodation() {
               <h1>{accommodation.title}</h1>
               <p>{accommodation.location}</p>
             </div>
-            <div className="accommodation-owner">
+            <div className="accommodation-tags-rating">
+              <TagsList tags={accommodation.tags}></TagsList>
+            </div>
+          </div>
+          <div className="accommodation-owner">
+            <div className="accommodation-host">
               <p>{accommodation.host.name}</p>
               <img
                 src={accommodation.host.picture}
                 alt={accommodation.host.name}
               />
             </div>
-          </div>
-          <div className="accommodation-tags-rating">
-            <TagsList tags={accommodation.tags}></TagsList>
             <StarsList rating={Number(accommodation.rating)}></StarsList>
           </div>
         </div>
